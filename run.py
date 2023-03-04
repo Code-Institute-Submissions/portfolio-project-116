@@ -50,3 +50,51 @@ def build_ship(dims):
 
 
 ship = build_ship(5); ship
+
+"""
+Function for player guesses
+"""
+
+
+def player_guess():
+    print("-" * 38)
+    row = int(input("Guess row:"))-1
+    col = int(input("Guess column:"))-1
+    print("-" * 38)
+    return (row, col)
+
+
+x = player_guess(); x
+
+
+def update_board(guess, board, ship, guesses):
+    if guess in guesses:
+        print("-" * 38)
+        print("You've already guessed that!")
+        print("-" * 38)
+        return board
+    guesses.append(guess)
+    if guess in ship:
+        print("-" * 38)
+        print("It's a hit!")
+        print("-" * 38)
+        """
+        'X' = hit
+        """
+        board[guess[0]][guess[1]] = "X"
+        """
+        ship.remove = for while loop in main()
+        """
+        ship.remove(guess)
+        return board
+    print("-" * 38)
+    print("Miss!")
+    print("-" * 38)
+    return board
+
+    guesses = []
+    our_guess = player_guess()
+    board = update_board(our_guess, board, ship, guesses)
+
+
+generate_board(board)
