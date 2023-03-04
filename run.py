@@ -6,7 +6,7 @@ print(" Guess a row and column between\n 1 and 5.")
 print("=" * 35)
 
 """
-Creates a board in a square, with dims. 
+Creates a board in a square, with dims.
 """
 
 
@@ -93,7 +93,6 @@ def update_board(guess, board, ship, guesses):
 guesses = []
 our_guess = player_guess()
 board = update_board(our_guess, board, ship, guesses)
-    
 
 generate_board(board)
 
