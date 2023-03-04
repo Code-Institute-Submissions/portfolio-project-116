@@ -8,6 +8,8 @@ print("=" * 35)
 """
 Creates a board in a square, with dims. 
 """
+
+
 def make_board(dims):
     return [["*" for count in range(dims)] for count in range(dims)]
 
@@ -28,6 +30,8 @@ between 2 and the length of the board.
 Orientation == 0: ship is horizontal,
 Orientation == 1: ship is vertical.
 """
+
+
 def build_ship(dims):
     ship_len = random.randint(2, dims)
     orientation = random.randint(0, 1)
@@ -51,6 +55,8 @@ ship = build_ship(5); ship
 """
 Function for player guesses
 """
+
+
 def player_guess():
     row = int(input("Guess row:\n")) - 1
     col = int(input("Guess column:\n")) - 1
@@ -95,6 +101,8 @@ generate_board(board)
 """
 Main function to call all code.
 """
+
+
 def main():
     board = make_board(5)
     ship = build_ship(5)
