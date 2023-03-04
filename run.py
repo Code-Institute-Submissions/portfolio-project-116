@@ -98,3 +98,23 @@ def update_board(guess, board, ship, guesses):
 
 
 generate_board(board)
+
+"""
+Main function to call all code.
+"""
+
+
+def main():
+    board = make_board(5)
+    ship = build_ship(5)
+    guesses = []
+    while len(ship) > 0:
+        board = update_board(player_guess(), board, ship, guesses)
+        generate_board(board)
+        print("-" * 38)
+        print("You sunk my ship!")
+        print("-" * 38)
+        return
+
+
+main()
